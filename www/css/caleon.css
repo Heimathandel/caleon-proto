@@ -9598,4 +9598,133 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+span {
+  font-size: 18px;
+  color: white; }
+
+.center-hh {
+  margin: auto;
+  min-width: 242px;
+  width: 242px; }
+
+.center-remote {
+  margin: auto;
+  width: 202px; }
+
+div.caleon-hh > .caleon-left {
+  margin-bottom: 11px;
+  width: 114px;
+  height: 30px;
+  margin-right: 2px;
+  margin-bottom: 5px; }
+
+div.caleon-hh > .caleon-right {
+  margin-bottom: 11px;
+  width: 114px;
+  height: 30px;
+  margin-left: 2px;
+  margin-bottom: 5px; }
+
+div.caleon-hh > div > span {
+  margin-left: 33px;
+  line-height: 30px; }
+
+div.caleon-heating {
+  background-image: url(../img/remote/switch_heating.png);
+  cursor: pointer; }
+
+div.caleon-cooling {
+  background-image: url(../img/remote/switch_cooling.png);
+  cursor: pointer; }
+
+div.caleon-holiday {
+  background-image: url(../img/remote/holiday.png);
+  cursor: pointer; }
+
+div.caleon-holiday_active {
+  background-image: url(../img/remote/holiday_active.png);
+  cursor: pointer; }
+
+div.caleon-left {
+  float: left; }
+
+div.caleon-right {
+  float: right; }
+
+.caleon-button {
+  height: 92px;
+  width: 92px;
+  margin: 2px; }
+
+div.caleon-off {
+  background-image: url(../img/remote/off.png);
+  cursor: pointer; }
+
+div.caleon-regular {
+  background-image: url(../img/remote/regular.png);
+  cursor: pointer; }
+
+div.caleon-eco {
+  background-image: url(../img/remote/eco.png);
+  cursor: pointer; }
+
+div.caleon-turbo {
+  background-image: url(../img/remote/turbo.png);
+  cursor: pointer; }
+
+div.wc {
+  position: absolute;
+  margin: auto;
+  background-image: url(../img/remote/icon_wc.png); }
+
+div.caleon-icon {
+  width: 36px;
+  height: 36px; }
+
+div.caleon-button-center {
+  top: 118px;
+  left: -webkit-calc(50% - 18px);
+  left: -moz-calc(50% - 18px);
+  left: calc(50% - 18px); }
+
+div.caleon-button-tl {
+  left: 22px;
+  top: 0px; }
+
+div.caleon-button-tr {
+  left: 116px;
+  top: 0px; }
+
+div.caleon-button-bl {
+  left: 22px;
+  top: 94px; }
+
+div.caleon-button-br {
+  left: 116px;
+  top: 94px; }
+
+div.caleon-button-tl > span {
+  float: right;
+  margin-right: 26px;
+  margin-top: 62px;
+  display: block; }
+
+div.caleon-button-tr > span {
+  float: left;
+  margin-left: 16px;
+  margin-top: 62px;
+  display: block; }
+
+div.caleon-button-bl > span {
+  float: right;
+  margin-right: 26px;
+  margin-top: 47px;
+  display: block; }
+
+div.caleon-button-br > span {
+  float: left;
+  margin-left: 16px;
+  margin-top: 47px;
+  display: block; }
+
 /*# sourceMappingURL=caleon.css.map */

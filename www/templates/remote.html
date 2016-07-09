@@ -1,11 +1,29 @@
 <ion-view view-title="Remote">
   <ion-content>
-    <div class="padding-top padding-left">
-      <img ng-if="isHeating" src="img/remote/switch_heating.png" ng-click="switchHeating()">
-      <img ng-if="!isHeating" src="img/remote/switch_cooling.png" ng-click="switchHeating()">
-
-      <img ng_if="!isHoliday" src="img/remote/holiday.png" ng-click="switchHoliday()">
-      <img ng-if="isHoliday" src="img/remote/holiday_active.png" ng-click="switchHoliday()">
+    <div class="caleon-hh row center-hh">
+      <div ng-if="isHeating" ng-click="switchHeating()" class="caleon-left caleon-heating"><span>Heating</span></div>
+      <div ng-if="!isHeating" ng-click="switchHeating()" class="caleon-left caleon-cooling"><span>Holiday</span></div>
+      <div ng_if="!isHoliday" ng-click="switchHoliday()" class="caleon-right caleon-holiday"><span>Holiday</span></div>
+      <div ng-if="isHoliday" ng-click="switchHoliday()" class="caleon-right caleon-holiday_active"><span>Holiday</span></div>
     </div>
+    <div class="center-remote padding-top text-center row">
+      <div class="caleon-button caleon-off caleon-button-tl">
+        <span>Off</span>
+      </div>
+      <div class="caleon-button caleon-regular caleon-button-tr">
+        <span>Regular</span>
+      </div>
+      <div class="caleon-icon caleon-button-center wc"></div>
+    </div>
+
+    <div class="center-remote padding-top text-center row">
+      <div class="caleon-button caleon-eco caleon-button-bl">
+        <span>Eco</span>
+      </div>
+      <div class="caleon-button caleon-turbo caleon-button-br">
+        <span>Turbo</span>
+      </div>
+    </div>
+
   </ion-content>
 </ion-view>
