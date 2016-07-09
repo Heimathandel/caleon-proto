@@ -45,20 +45,19 @@ angular.module('starter.controllers', [])
     //public variables
     $scope.isHeating = true;
     $scope.isHoliday = false;
-    $scope.targetTemperatur = 23.5;
+    $scope.targetTemperature = 23.5;
 
     $scope.switchHoliday = function () {
       $scope.isHoliday = !$scope.isHoliday;
     };
-
     $scope.switchHeating = function () {
       $scope.isHeating = !$scope.isHeating;
     };
 
     $scope.decreaseTemperature = function () {
-      $scope.targetTemperatur > minTemp ? $scope.targetTemperatur -= 0.5 : null;
+      $scope.targetTemperature > minTemp ? $scope.targetTemperatur -= 0.5 : null;
     };
     $scope.increaseTemperature = function () {
-      $scope.targetTemperatur < maxTemp ? $scope.targetTemperatur += 0.5 : null;
+      $scope.targetTemperature < maxTemp ? $scope.targetTemperatur += 0.5 : null;
     };
   });
