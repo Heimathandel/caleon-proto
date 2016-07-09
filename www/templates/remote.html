@@ -1,0 +1,11 @@
+<ion-view view-title="Remote">
+  <ion-content>
+    <div class="padding-top padding-left">
+      <img ng-if="isHeating" src="img/remote/switch_heating.png" ng-click="switchHeating()">
+      <img ng-if="!isHeating" src="img/remote/switch_cooling.png" ng-click="switchHeating()">
+
+      <img ng_if="!isHoliday" src="img/remote/holiday.png" ng-click="switchHoliday()">
+      <img ng-if="isHoliday" src="img/remote/holiday_active.png" ng-click="switchHoliday()">
+    </div>
+  </ion-content>
+</ion-view>
