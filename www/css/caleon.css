@@ -9612,21 +9612,19 @@ span {
   width: 202px; }
 
 div.caleon-hh > .caleon-left {
-  margin-bottom: 11px;
   width: 114px;
   height: 30px;
   margin-right: 2px;
-  margin-bottom: 5px; }
+  margin-bottom: 16px; }
 
 div.caleon-hh > .caleon-right {
-  margin-bottom: 11px;
   width: 114px;
   height: 30px;
   margin-left: 2px;
   margin-bottom: 5px; }
 
 div.caleon-hh > div > span {
-  margin-left: 33px;
+  margin-left: 40px;
   line-height: 30px; }
 
 div.caleon-heating {
@@ -9651,6 +9649,10 @@ div.caleon-left {
 div.caleon-right {
   float: right; }
 
+.caleon-gray {
+  color: #909CA8;
+  font-size: 22px; }
+
 .caleon-button {
   height: 92px;
   width: 92px;
@@ -9672,6 +9674,11 @@ div.caleon-turbo {
   background-image: url(../img/remote/turbo.png);
   cursor: pointer; }
 
+div.humidity {
+  position: absolute;
+  margin: auto;
+  background-image: url(../img/remote/Feuchtigkeit.png); }
+
 div.wc {
   position: absolute;
   margin: auto;
@@ -9682,7 +9689,7 @@ div.caleon-icon {
   height: 36px; }
 
 div.caleon-button-center {
-  top: 118px;
+  top: 175px;
   left: -webkit-calc(50% - 18px);
   left: -moz-calc(50% - 18px);
   left: calc(50% - 18px); }

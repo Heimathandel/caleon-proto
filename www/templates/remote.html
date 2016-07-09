@@ -1,11 +1,26 @@
 <ion-view view-title="Remote">
-  <ion-content>
+  <ion-content style="padding-top:50px;">
+    <!--Remote header-->
     <div class="caleon-hh row center-hh">
       <div ng-if="isHeating" ng-click="switchHeating()" class="caleon-left caleon-heating"><span>Heating</span></div>
-      <div ng-if="!isHeating" ng-click="switchHeating()" class="caleon-left caleon-cooling"><span>Holiday</span></div>
+      <div ng-if="!isHeating" ng-click="switchHeating()" class="caleon-left caleon-cooling"><span>Cooling</span></div>
       <div ng_if="!isHoliday" ng-click="switchHoliday()" class="caleon-right caleon-holiday"><span>Holiday</span></div>
-      <div ng-if="isHoliday" ng-click="switchHoliday()" class="caleon-right caleon-holiday_active"><span>Holiday</span></div>
+      <div ng-if="isHoliday" ng-click="switchHoliday()" class="caleon-right caleon-holiday_active"><span>Holiday</span>
+      </div>
     </div>
+    <!--Temp / Humidity-->
+    <div class="row caleon-hh center-hh">
+      <div class="caleon-left">
+        <div class="caleon-icon wc"></div>
+        <span class="caleon-gray">23.5 °C</span>
+      </div>
+      <div class="caleon-right">
+        <div class="caleon-icon humidity"></div>
+        <span class="caleon-gray">55.5 %</span>
+      </div>
+    </div>
+
+    <!--remote mainarea-->
     <div class="center-remote padding-top text-center row">
       <div class="caleon-button caleon-off caleon-button-tl">
         <span>Off</span>
@@ -15,13 +30,23 @@
       </div>
       <div class="caleon-icon caleon-button-center wc"></div>
     </div>
-
     <div class="center-remote padding-top text-center row">
       <div class="caleon-button caleon-eco caleon-button-bl">
         <span>Eco</span>
       </div>
       <div class="caleon-button caleon-turbo caleon-button-br">
         <span>Turbo</span>
+      </div>
+    </div>
+
+    <!--Remote Plus/Minus Temp-->
+    <div class="center-remote padding-top text-center row" style="padding-top: 20px;">
+      <div class="pull-left col-20">
+        <img src="img/remote/minus.png" ng-click="decreaseTemperature()">
+      </div>
+      <div class="col-60 caleon-gray" style="line-height: 30px;">{{targetTemperatur}} °C</div>
+      <div class="pull-right col-20">
+        <img src="img/remote/plus.png" ng-click="increaseTemperature()">
       </div>
     </div>
 
