@@ -55,9 +55,9 @@ angular.module('starter.controllers', [])
     };
 
     $scope.decreaseTemperature = function () {
-      $scope.targetTemperature > minTemp ? $scope.targetTemperatur -= 0.5 : null;
+      $scope.targetTemperature > minTemp ? $scope.targetTemperature -= 0.5 : null;
     };
     $scope.increaseTemperature = function () {
-      $scope.targetTemperature < maxTemp ? $scope.targetTemperatur += 0.5 : null;
+      $scope.targetTemperature < maxTemp ? $scope.targetTemperature += 0.5 : null;
     };
   });
