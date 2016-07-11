@@ -1,17 +1,23 @@
 angular.module('starter.controllers', [])
 
-  .controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
-
+  .controller('AppCtrl', function ($scope, $ionicModal, $ionicLoading) {
     // With the new view caching in Ionic, Controllers are only called
     // when they are recreated or on app start, instead of every page change.
     // To listen for when this page is active (for example, to refresh data),
     // listen for the $ionicView.enter event:
     //$scope.$on('$ionicView.enter', function(e) {
     //});
-
+    ionic.Platform.ready(function () {
+    });
+    /*PUBLIC VARIABLES*/
     // Form data for the login modal
     $scope.loginData = {};
-
+    //Testcredentials Napto
+    $scope.loginData.mail = "test@test.de";
+    $scope.loginData.password = "11111111";
+    $scope.loginData.sensorID = "0";
+    //
+    $scope.currentTemperature = 25;
     // Create the login modal that we will use later
     $ionicModal.fromTemplateUrl('templates/login.html', {
       scope: $scope
@@ -28,16 +34,33 @@ angular.module('starter.controllers', [])
     $scope.login = function () {
       $scope.modal.show();
     };
-
     // Perform the login action when the user submits the login form
     $scope.doLogin = function () {
       console.log('Doing login', $scope.loginData);
+      $ionicLoading.show({
+        template: '<ion-spinner icon="ripple" class="spinner-positive"></ion-spinner>'
+      });
+      // will execute when device is ready, or immediately if the device is already ready.
+      // Start Nabto and login as guest
+      nabto.startup(function () {
+        // Make a Nabto request to a device
+        var url = 'nabto://demo.nabto.net/house_temperature.json?sensor_id=' + $scope.loginData.sensorID;
 
-      // Simulate a login delay. Remove this and replace with your login
-      // code if using a login system
-      $timeout(function () {
-        $scope.closeLogin();
-      }, 1000);
+        //try access napto plugin (Android, iOS)
+        try {
+          nabto.fetchUrl(url, function (status, result) {
+            // Print out the response
+            if (!status && result.response) {
+              $scope.currentTemperature = result.response.temperature;
+            }
+            $ionicLoading.hide();
+            $scope.closeLogin();
+          });
+        } catch(e){
+          $ionicLoading.hide();
+          $scope.closeLogin();
+        }
+      });
     };
   })
   .controller('RemoteCtrl', function ($scope) {
